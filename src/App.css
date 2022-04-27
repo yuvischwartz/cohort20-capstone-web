@@ -4,62 +4,30 @@ font-family: 'Montserrat', sans-serif;
 font-family: 'Open Sans', sans-serif;
 font-family: 'Quicksand', sans-serif; */
 
-.logo{
-  font-family:  'Inspiration',cursive;
-  font-style: italic;
-}
-*{
-  font-family: 'Lato', sans-serif;
-  font-weight: 400;
-}
-.font-ligth{
-  font-family: 'Lato', sans-serif;
-  font-weight: 300;
 
-}
-.font-ligth2{
-  font-family: 'Lato', sans-serif;
-  font-weight: 500;
-}
-.font1{
-  font-family: 'Montserrat', sans-serif;
-  font-weight: 400;
-}
-.font2{
+
+*{
   font-family: 'Open Sans', sans-serif;
   font-weight: 500;
 }
-.font3{
+.font-ligth{
   font-family: 'Quicksand', sans-serif;
-}
-.logo2{
-  font-family: 'Quicksand', sans-serif;
-  font-weight: 500;
-}
-.logo2-italic{
-  font-family: 'Quicksand', sans-serif;
-  font-weight: 500;
-  font-style: italic;
-}
-.logo-bold{
-  font-family: 'Quicksand', sans-serif;
-  font-weight: 700;
-}
-.text{
-  font-family: 'Quicksand', sans-serif;
-}
-/* .new-font{
-  font-family: 'Playfair Display', serif;
   font-weight: 400;
-} */
-/* .logo3{
-  font-family: 'Quicksand', sans-serif;
-  font-weight: 400; */
-/* .bg{
-background-image: url(`images/bg-1.jpg`);
-background-color: #ef4444;
-background-blend-mode: lighten;
-} */
+
+}
+.font-ligth2{
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 300;
+}
+.font1{
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 500;
+}
+.font2{
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 500;
+}
+
 
 /* colors: */
 
