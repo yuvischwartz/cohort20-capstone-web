@@ -10,20 +10,25 @@ function CategoriesMenu(props) {
     return (
       <>
         <div className={'z-50 bg-pistachio text-black  w-80 h-36 absolute mt-2 left-40 '}>
-          <div className={'flex flex-row justify-between'}>
+          <div className={'flex flex-row justify-center pt-2'}>
+          <ul>
+            {props.allCategories && props.allCategories.map((category, idx) => {
+              return <li className={props.activeCategory == category.name ? 'logo2 text-md cursor-pointer border-b border-black' : 'logo2 text-md cursor-pointer hover:border-b hover:border-black'} key={idx} onClick={() => props.setActiveCategory(category.name)}>{category.name}</li>
+            })}
+          </ul>
             {/* <ul className={'p-2 mx-2'}>
-              <li className={props.activeCategory == 'categoryOne' ? 'logo2 text-md cursor-pointer border-b border-black' : 'logo2 text-md cursor-pointer hover:border-b hover:border-black'}><button onClick={() => props.setActiveCategory('categoryOne')}>Category 1</button></li>
-              <li className={props.activeCategory == 'categoryTwo' ? 'logo2 text-md cursor-pointer border-b border-black' : 'logo2 text-md cursor-pointer hover:border-b hover:border-black'}><button onClick={() => props.setActiveCategory('categoryTwo')}>Category 2</button></li>
-              <li className={props.activeCategory == 'categoryThree' ? 'logo2 text-md cursor-pointer border-b border-black' : 'logo2 text-md cursor-pointer hover:border-b hover:border-black'}><button onClick={() => props.setActiveCategory('categoryThree')}>Category 3</button></li>
-              <li className={props.activeCategory == 'categoryFour' ? 'logo2 text-md cursor-pointer border-b border-black' : 'logo2 text-md cursor-pointer hover:border-b hover:border-black'}><button onClick={() => props.setActiveCategory('categoryFour')}>Category 4</button></li>
-              <li className={props.activeCategory == 'categoryFive' ? 'logo2 text-md cursor-pointer border-b border-black' : 'logo2 text-md cursor-pointer hover:border-b hover:border-black'}><button onClick={() => props.setActiveCategory('categoryFive')}>Category 5</button></li>
+              <li className={props.activeCategory == 'Decorations' ? 'logo2 text-md cursor-pointer border-b border-black' : 'logo2 text-md cursor-pointer hover:border-b hover:border-black'}><button onClick={() => props.setActiveCategory('Decorations')}>Decorations</button></li>
+              <li className={props.activeCategory == 'Cake' ? 'logo2 text-md cursor-pointer border-b border-black' : 'logo2 text-md cursor-pointer hover:border-b hover:border-black'}><button onClick={() => props.setActiveCategory('Cake')}>Cake</button></li>
+              <li className={props.activeCategory == 'Food' ? 'logo2 text-md cursor-pointer border-b border-black' : 'logo2 text-md cursor-pointer hover:border-b hover:border-black'}><button onClick={() => props.setActiveCategory('Food')}>Food</button></li>
+              <li className={props.activeCategory == 'Party Rentals' ? 'logo2 text-md cursor-pointer border-b border-black' : 'logo2 text-md cursor-pointer hover:border-b hover:border-black'}><button onClick={() => props.setActiveCategory('Party Rentals')}>Party Rentals</button></li>
+              <li className={props.activeCategory == 'Photography' ? 'logo2 text-md cursor-pointer border-b border-black' : 'logo2 text-md cursor-pointer hover:border-b hover:border-black'}><button onClick={() => props.setActiveCategory('Photography')}>Photography</button></li>
             </ul> */}
-            <ul className={'p-2 mx-2'}>
+            {/* <ul className={'p-2 mx-2'}>
               <li className={'logo2 text-md'}>Food</li>
               <li className={'logo2 text-md'}>Deserts</li>
               <li className={'logo2 text-md'}>Party Rentals</li>
               <li className={'logo2 text-md'}>Amazon's links</li>
-            </ul>
+            </ul> */}
           </div>  
         </div>
       </>

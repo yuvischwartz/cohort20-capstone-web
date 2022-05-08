@@ -24,8 +24,10 @@ function App() {
     categories = await categories.json()
     setAllCategories(categories)
 };
+  const emptyCategories = async () => {
 
-// run some code that runs once when the page loads up
+  }
+  // run some code that runs once when the page loads up
 useEffect(() => {
     console.log('this code will run only once when the page loads up!')
     fetchCategories()
@@ -88,14 +90,14 @@ useEffect(() => {
   return (
     <>
       <div className={'h-fit w-full relative'}>
-         <Topbar />
+        <Topbar allCategories={allCategories} activeCategory={activeCategory} setActiveCategory={setActiveCategory}/>
       <div className={'flex justify-center text-center relative mt-5 p-0'}>
           <img  
             className={'h-5/6 w-full z-0'}  
                 alt='img'
                 src={`/images/banner.png`}
           />
-          <h1 className={'text-7xl logo z-50 absolute top-32 text-peach'}>Category {activeCategory}</h1>
+          <h1 className={'text-7xl logo z-50 absolute top-32 text-peach'}>{activeCategory}</h1>
         </div>
   
           <div className={'flex flex-row justify-start'}>
@@ -118,8 +120,9 @@ useEffect(() => {
           <ul>
             {allCategories && allCategories.map((category, idx) => {
                 {console.log(category.name)}
-              return <li className={'text-red-400'} key={idx} onClick={() => setActiveCategory(category)} >{category.name}</li>
+              return <li className={'text-red-400'} key={idx} onClick={() => setActiveCategory(category.name)}>{category.name}</li>
             })}
+            <h1>active:</h1>{activeCategory}
           </ul>
           {/* FETCH QUESTIONS */}
           <ul>

@@ -28,7 +28,7 @@ function Topbar(props) {
                         className={'hidden sm:inline-block logo2 cursor-pointer '}>
                       Categories <i className={'fas fa-caret-down text-md pl-1'} />
               {categoriesMenu && <CategoriesMenu handleClick={handleClick}
-                activeCategory={props.activeCategory} setActiveCategory={props.setActiveCategory} allCategories={props.allCategories} setAllCategories={props.setAllCategories}
+                activeCategory={props.activeCategory} setActiveCategory={props.setActiveCategory} allCategories={props.allCategories} 
               />}
                       </li>
                       <li className={'hidden sm:inline-block logo2 cursor-pointer hover:border-b hover:border-black'}><Link to="/to-do's" className={'logo2'}>Birthday Check List</Link></li>
